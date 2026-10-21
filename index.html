@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spades Tutorial Playable</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="meta">
+    Spades tutorial playable · English copy · edit <code>copy.js</code> and reload · no Unity rebuild
+  </p>
+
+  <div class="stage">
+    <div class="phone" aria-label="Phone preview">
+      <div class="screen">
+        <div class="hud">
+          <div class="hud-left">
+            <div class="pill goal" id="goalPill">Team tricks: 0 / 4</div>
+            <div class="pill bags" id="scorePill" hidden>+0 bags</div>
+          </div>
+          <div class="pill"><button type="button" id="restartBtn"><span id="restartLabel">Restart</span></button></div>
+        </div>
+
+        <div class="seat north us">
+          <div class="seat-badge">
+            <img src="assets/avatar_partner.png" alt="" />
+            <div class="label" id="labelNorth">PARTNER</div>
+          </div>
+          <div class="hand backs" id="handNorth"></div>
+        </div>
+        <div class="seat west them">
+          <div class="seat-badge">
+            <img src="assets/avatar_left.png" alt="" />
+            <div class="label" id="labelWest">LEFT</div>
+          </div>
+          <div class="hand backs vertical" id="handWest"></div>
+        </div>
+        <div class="seat east them">
+          <div class="seat-badge">
+            <img src="assets/avatar_right.png" alt="" />
+            <div class="label" id="labelEast">RIGHT</div>
+          </div>
+          <div class="hand backs vertical" id="handEast"></div>
+        </div>
+
+        <div class="trick" id="trick">
+          <div class="trick-slot north" id="slotNorth"></div>
+          <div class="trick-slot west" id="slotWest"></div>
+          <div class="trick-slot east" id="slotEast"></div>
+          <div class="trick-slot south" id="slotSouth"></div>
+        </div>
+
+        <div class="flash" id="flash" role="status" aria-live="polite"></div>
+        <div class="tip" id="tip" role="status"></div>
+
+        <div class="seat south us">
+          <div class="hand fan" id="handSouth"></div>
+          <div class="seat-badge">
+            <img src="assets/avatar_you.png" alt="" />
+            <div class="label" id="labelSouth">YOU</div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal" role="dialog" aria-modal="true">
+          <div class="modal-card">
+            <h2 id="modalTitle">Title</h2>
+            <p id="modalBody">Body</p>
+            <p class="footnote" id="modalFoot" hidden></p>
+            <button type="button" class="cta" id="modalCta">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="editor">
+      <h3>Full-hand flow (13 tricks)</h3>
+      <ol>
+        <li>Intro — teams (you + partner)</li>
+        <li>Contract — team bid 4 → aim for +40</li>
+        <li>West leads — play all cards (tutorial seed)</li>
+        <li>First trick — what wins + team count</li>
+        <li>Follow suit — green = legal</li>
+        <li>Trump / Spades broken — tips in play</li>
+        <li>You win — you lead (no Spades until broken)</li>
+        <li>Hit 4 — contract made (+40), keep playing</li>
+        <li>Overtricks — bags (+1) while finishing hand</li>
+        <li>Trick 13 — hand complete + score summary</li>
+      </ol>
+      <div class="hint">
+        Change any UI text in <strong>copy.js</strong>, save, refresh this page.
+        Hands match <code>SeedsHandler.TutorialSeed</code>. No Unity rebuild.
+      </div>
+    </aside>
+  </div>
+
+  <script src="copy.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
