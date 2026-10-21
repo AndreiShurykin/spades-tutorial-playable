@@ -548,6 +548,8 @@
     if (withIntro && !skipIntro) {
       await showModal("intro");
       await showModal("goal");
+      await showModal("howToWin");
+      await showModal("spadesTrumpIntro");
     }
     await startTrick();
   }

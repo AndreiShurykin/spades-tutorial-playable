@@ -35,6 +35,18 @@ window.TUTORIAL_COPY = {
       footnote: "A trick is one card from each player — four cards total. Play out the full hand.",
       cta: "Got it",
     },
+    howToWin: {
+      title: "How you win",
+      body: "Make the contract — take at least 4 team tricks — to score points (10 × bid). Miss it and you get zero this hand.",
+      footnote: "A full game is several hands. First team to the target score wins.",
+      cta: "Next",
+    },
+    spadesTrumpIntro: {
+      title: "Spades are trump",
+      body: "A Spade beats any other suit. Among Spades, higher rank wins.",
+      footnote: "You can't lead Spades until they're broken — someone plays a Spade on a non-Spade trick.",
+      cta: "Let's play",
+    },
     trickExplained: {
       title: "That's a trick",
       body: "The highest card of the suit that was led wins the trick. Your team's count goes up when you or your partner wins.",
@@ -50,7 +62,7 @@ window.TUTORIAL_COPY = {
       tip: "Nice! You won that trick. Now you lead — pick a suit (not Spades yet).",
     },
     spadesTrump: {
-      tip: "Spades are trump! A Spade beats any other suit.",
+      tip: "Trump! That Spade beats every other suit — higher Spade wins if both play Spades.",
     },
     spadesBroken: {
       tip: "Spades are broken — now Spades can be led.",
